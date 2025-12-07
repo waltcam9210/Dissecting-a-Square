@@ -37,9 +37,12 @@ for (i=1; i<squareSide; i++){
         let finalHeightCheck = Math.sqrt(thirdHyp*thirdHyp-secondHypMinusSmallLeg*secondHypMinusSmallLeg)
 
         if(heightWorks == true && finalHeightCheck == height){
-         array.push("small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " second triangle: "+secondLeg+ ", "+squareSide+", "+secondHyp+
+         outputParagraph.innerText += "small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " second triangle: "+secondLeg+ ", "+squareSide+", "+secondHyp+
             " third triangle: "+thirdLeg+ ", "+squareSide+", "+thirdHyp+
-            " height: "+height+ " values for w and z-w: "+newSmallLeg+ ", "+secondHypMinusSmallLeg);
+            " height: "+height+ " values for w and z-w: "+newSmallLeg+ ", "+secondHypMinusSmallLeg + "\n";
+         /*array.push("small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " second triangle: "+secondLeg+ ", "+squareSide+", "+secondHyp+
+            " third triangle: "+thirdLeg+ ", "+squareSide+", "+thirdHyp+
+            " height: "+height+ " values for w and z-w: "+newSmallLeg+ ", "+secondHypMinusSmallLeg);*/
 
            
         }
@@ -49,7 +52,7 @@ for (i=1; i<squareSide; i++){
    }
 }
 }
-for(const item of array){
-outputParagraph.innerText += item + "\n";
-}
+//for(const item of array){
+//outputParagraph.innerText += item + "\n";
+//}
 });
