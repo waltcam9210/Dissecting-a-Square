@@ -50,9 +50,12 @@ for (let i=1; i<squareSide; i++){
          
 //makes sure that both middle triangles are right, and also have integer side lengths. then outputs the results
         if(heightWorks == true && finalHeightCheck == height){
-         outputParagraph.innerText += "small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " second triangle: "+legA+ ", "+squareSide+", "+secondHyp+
-            " third triangle: "+legB+ ", "+squareSide+", "+thirdHyp+
-            " height: "+height+ " values for w and z-w: "+newSmallLeg+ ", "+secondHypMinusSmallLeg + "\n";
+          console.log("square side lengths: "+squareSide+"triangle 1: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " triangle 2: "+legA+ ", "+squareSide+", "+secondHyp+
+            " triangle 3: "+legB+ ", "+squareSide+", "+thirdHyp+
+            " height: "+height+ " newSmallLeg, secondHypMinusSmallLeg: "+newSmallLeg+ ", "+secondHypMinusSmallLeg);
+         outputParagraph.innerText += "square side lengths: "+squareSide+"triangle 1: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " triangle 2: "+legA+ ", "+squareSide+", "+secondHyp+
+            " triangle 3: "+legB+ ", "+squareSide+", "+thirdHyp+
+            " height: "+height+ " newSmallLeg, secondHypMinusSmallLeg: "+newSmallLeg+ ", "+secondHypMinusSmallLeg + "\n";
           await new Promise(r => setTimeout(r, 0));
         }
        }
@@ -62,6 +65,7 @@ for (let i=1; i<squareSide; i++){
 }
 }
 });
+
 
 
 
