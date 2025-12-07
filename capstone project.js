@@ -39,6 +39,7 @@ for (i=1; i<squareSide; i++){
          outputParagraph.innerText += "small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " second triangle: "+secondLeg+ ", "+squareSide+", "+secondHyp+
             " third triangle: "+thirdLeg+ ", "+squareSide+", "+thirdHyp+
             " height: "+height+ " values for w and z-w: "+newSmallLeg+ ", "+secondHypMinusSmallLeg + "\n";
+          await new Promise(r => setTimeout(r, 0));
         }
        }
    
@@ -47,4 +48,5 @@ for (i=1; i<squareSide; i++){
 }
 }
 });
+
 
