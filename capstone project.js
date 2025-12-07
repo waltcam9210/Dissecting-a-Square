@@ -1,4 +1,12 @@
-for (k=1; k<10001; k++){
+const button = document.getElementById("myButton");
+const outputParagraph = document.getElementById("output");
+let array= [];
+
+button.addEventListener("click", function () {
+  let m = document.getElementById("input");
+  m=m.value;
+  m=m*1;
+for (k=1; k<m+1; k++){
 let squareSide = k;
 for (i=1; i<squareSide; i++){
    let secondLeg=i;
@@ -29,10 +37,11 @@ for (i=1; i<squareSide; i++){
         let finalHeightCheck = Math.sqrt(thirdHyp*thirdHyp-secondHypMinusSmallLeg*secondHypMinusSmallLeg)
 
         if(heightWorks == true && finalHeightCheck == height){
-            console.log("small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ 
-            " second triangle: "+secondLeg+ ", "+squareSide+", "+secondHyp+
+         array.push("small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " second triangle: "+secondLeg+ ", "+squareSide+", "+secondHyp+
             " third triangle: "+thirdLeg+ ", "+squareSide+", "+thirdHyp+
             " height: "+height+ " values for w and z-w: "+newSmallLeg+ ", "+secondHypMinusSmallLeg);
+
+           
         }
        }
    
@@ -40,3 +49,7 @@ for (i=1; i<squareSide; i++){
    }
 }
 }
+for(const item of array){
+outputParagraph.innerText += item + "\n";
+}
+});
