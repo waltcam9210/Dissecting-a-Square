@@ -1,8 +1,7 @@
 const button = document.getElementById("myButton");
 const outputParagraph = document.getElementById("output");
-let array= [];
 
-button.addEventListener("click", function () {
+button.addEventListener("click", async function () {
   let m = document.getElementById("input");
   m=m.value;
   m=m*1;
@@ -40,11 +39,6 @@ for (i=1; i<squareSide; i++){
          outputParagraph.innerText += "small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " second triangle: "+secondLeg+ ", "+squareSide+", "+secondHyp+
             " third triangle: "+thirdLeg+ ", "+squareSide+", "+thirdHyp+
             " height: "+height+ " values for w and z-w: "+newSmallLeg+ ", "+secondHypMinusSmallLeg + "\n";
-         /*array.push("small triangle: "+smallLeg1+ ", "+smallLeg2+", "+smallHyp+ " second triangle: "+secondLeg+ ", "+squareSide+", "+secondHyp+
-            " third triangle: "+thirdLeg+ ", "+squareSide+", "+thirdHyp+
-            " height: "+height+ " values for w and z-w: "+newSmallLeg+ ", "+secondHypMinusSmallLeg);*/
-
-           
         }
        }
    
@@ -52,7 +46,5 @@ for (i=1; i<squareSide; i++){
    }
 }
 }
-//for(const item of array){
-//outputParagraph.innerText += item + "\n";
-//}
 });
+
